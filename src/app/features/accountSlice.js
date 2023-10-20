@@ -4,7 +4,9 @@ import { createSlice } from "@reduxjs/toolkit"
 const initialState={
 totalBalance:0,
 totalAccounts:[],
-timeSeries:[]
+timeSeries:[],
+balance:undefined,
+monthlyPayment:undefined
 }
 
 const accountSlice=createSlice({
@@ -19,9 +21,15 @@ const accountSlice=createSlice({
         },
         setTimeSeries:(state,action)=>{
             state.timeSeries=action.payload
+        },
+        setMonthlyPayment:(state,action)=>{
+            state.monthlyPayment=action.payload
+        },
+        setBalance:(state,action)=>{
+            state.balance=action.payload
         }
     }
 })
 
 export default accountSlice.reducer
-export const {setTotalAccounts,setTimeSeries,setTotalBalance} =accountSlice.actions
+export const {setTotalAccounts,setTimeSeries,setTotalBalance,setBalance,setMonthlyPayment} =accountSlice.actions
