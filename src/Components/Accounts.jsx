@@ -18,23 +18,34 @@ const Accounts = () => {
       }
 
   return (
-    <div className="w-2/5 space-y-3" data-testid="accounts-component">
+    <div className="w-2/5  flex flex-col  items-center" data-testid="accounts-component">
+        <div className='space-y-3'>
+
+        
             <h1 className="text-4xl">Accounts</h1>
-            Count:{totalAccounts.length}
-            <h1 className="font-semibold">Enter Balance</h1>
+            <h1 className='font-semibold'>Count {totalAccounts.length}</h1>
+             
+            <h1 className= "text-xl font-light">Enter Balance</h1>
             <div className="flex gap-2">
               <input
+              class="rounded-md px-4 py-1 border border-gray-400 placeholder:text-gray-400"
                 type="number"
                 placeholder="Amount"
                 value={balance}
                 onChange={(e) => handleBalanceChange(e.target.value)}
               />
-              <button onClick={() => handleTotalAccounts(balance)}>Submit</button>
+              <button className='bg-blue-500 rounded-md px-4 py-1 text-white font-medium' onClick={() => handleTotalAccounts(balance)}>Submit</button>
             </div>
             {totalAccounts.length !== 0 &&
               totalAccounts.map((e, idx) => {
-                return <div key={idx}>Balance:{e}</div>;
+                return <div className='rounded-md px-4 py-1 border border-gray-200 flex  justify-between' key={idx}>
+                     <span className='text-gray-400'>
+                        Bal
+                    </span>
+                    <span>{e}</span>
+                    </div>;
               })}
+          </div>
           </div>
   )
 }

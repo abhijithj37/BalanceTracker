@@ -9,7 +9,7 @@ import { useEffect } from "react";
       const dispatch = useDispatch();
     
       const calculateRepayment = (monthlyPayment) => {
-        if (monthlyPayment <= 0 || !totalBalance)
+        if (!monthlyPayment||monthlyPayment <= 0 || !totalBalance)
           return dispatch(setTimeSeries([]));
     
         const months = [];

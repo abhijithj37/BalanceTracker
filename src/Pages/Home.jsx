@@ -5,7 +5,7 @@ function Home() {
  
   return (
     <>
-      <main  className="flex p-20 px-25" data-testid="home-page"    >
+      <main  className="flex p-20 px-25 " data-testid="home-page"    >
         <Accounts/>
         <RepaymentModel />
       </main>
