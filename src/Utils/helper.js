@@ -30,4 +30,6 @@ import { useEffect } from "react";
       useEffect(()=>{
         calculateRepayment(monthlyPayment)
           },[totalBalance,monthlyPayment])
+
+          return {calculateRepayment}
  }

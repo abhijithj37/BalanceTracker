@@ -17,7 +17,7 @@ function RepaymentModel() {
   return (
   
   
-        <div className=" w-3/5 space-y-5">
+        <div className=" w-3/5 space-y-5" data-testid="repayment-model">
           <h1 className="text-2xl font-semibold">
             Initial balance :{totalBalance}
           </h1>
@@ -29,7 +29,7 @@ function RepaymentModel() {
               onChange={(e) => {
                 handleMonthlyPaymentChange(e.target.value);
               }}
-              placeholder="Enter your monthly payement"
+              placeholder="monthly payment"
             />
           </div>
            <div className="pt-5">

@@ -18,7 +18,7 @@ const Accounts = () => {
       }
 
   return (
-    <div className="w-2/5 space-y-3">
+    <div className="w-2/5 space-y-3" data-testid="accounts-component">
             <h1 className="text-4xl">Accounts</h1>
             Count:{totalAccounts.length}
             <h1 className="font-semibold">Enter Balance</h1>
